@@ -33,13 +33,27 @@ export default function TextForm(props) {
         }}>
           Reverse
         </button>
+        <button className="btn btn-primary mx-2" onClick={() => {
+          setText(
+            text.replaceAll(" ","")
+          )
+        }}>
+          Remove extra space
+        </button>
+        <button className="btn btn-primary mx-2" onClick={() => {
+          setText(
+            text.replaceAll(" ","_")
+          )
+        }}>
+          Don't use white spaces
+        </button>
       </div>
       <div className="container my-2">
         <h1>Your text summary here</h1>
         <p>characters {text.length} and {text.split(" ").length} words</p>
         <p>Reading time: {0.008 * text.split(" ").length} minutes</p>
-        <p>preview</p>
-        <h2>{text}</h2>
+        <h2>preview</h2>
+        <p>{text === '' ? "please Enter text in text form" : text}</p>
       </div>
     </>
   );

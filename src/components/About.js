@@ -6,9 +6,7 @@ export default function About() {
     backgroundColor: "#2c2c2c"
   })
 
-  const [btnText, setBtnText] = useState(
-    "Enable light mode"
-  )
+  const [btnText, setBtnText] = useState("Enable light mode")
 
   const themeToggle = () => {
     console.log('btn clicked');
@@ -18,9 +16,8 @@ export default function About() {
           backgroundColor: "#fff"
       })
 
-      setBtnText(
-        "enable Dark mode"
-      )
+      setBtnText("enable Dark mode")
+      
     } else {
       setStyle({
         color: "#fff",
