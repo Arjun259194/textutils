@@ -16,6 +16,7 @@ export default function TextForm(props) {
           setText(
             text.toUpperCase()
           )
+          props.showAlert("converted to uppercase", "success")
         }}>
           Convert to upper
         </button>
@@ -23,6 +24,7 @@ export default function TextForm(props) {
           setText(
             text.toLowerCase()
           )
+          props.showAlert("converted to lowercase", "success")
         }}>
           Convert to lower
         </button>
@@ -30,20 +32,23 @@ export default function TextForm(props) {
           setText(
             text.split('').reverse().join('')
           )
+          props.showAlert("String reversed", "success")
         }}>
           Reverse
         </button>
         <button className="btn btn-primary mx-2" onClick={() => {
           setText(
-            text.replaceAll(" ","")
+            text.replaceAll(" ", "")
           )
+          props.showAlert("Spaces removed", "success")
         }}>
           Remove extra space
         </button>
         <button className="btn btn-primary mx-2" onClick={() => {
           setText(
-            text.replaceAll(" ","_")
+            text.replaceAll(" ", "_")
           )
+          props.showAlert("spaces replaced", "success")
         }}>
           Don't use white spaces
         </button>
