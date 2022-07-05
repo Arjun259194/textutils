@@ -24,11 +24,13 @@ function App() {
       document.body.style.backgroundColor = "#3c3c3c";
       document.body.style.color = "#fff";
       showAlert("Dark mode is on","success")
+      document.title = "Textutils | Dark mode";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "#fff";
       document.body.style.color = "#000";
       showAlert("Light mode is on","success")
+      document.title = "Textutils | Light mode";
     }
   };
 
